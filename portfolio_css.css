@@ -172,11 +172,13 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 0 80px 0;
+    padding: 120px 0 0 0;
     background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-container {
@@ -298,27 +300,6 @@ body {
     align-items: center;
 }
 
-.profile-photo {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.profile-photo:hover {
-    transform: scale(1.02);
-}
-
-/* Floating particles */
-.particle {
-    position: absolute;
-    background: rgba(6, 182, 212, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 6s ease-in-out infinite;
-}
 
 /* Hero Navigation Dots */
 .hero-dots {
@@ -370,6 +351,8 @@ body {
     padding: 6rem 0;
     background: var(--bg-secondary);
     color: var(--text-primary);
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -419,9 +402,29 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 300px 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.4);
 }
 
 .about-text {
@@ -503,6 +506,17 @@ body {
     justify-content: center;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+}
+
+.skill-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-image {
+    transform: scale(1.1);
 }
 
 .skill-title {
@@ -889,8 +903,18 @@ body {
         justify-content: center;
     }
     
-    .profile-photo {
+    .profile-image {
         max-width: 300px;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .profile-image {
+        max-width: 200px;
     }
 }
 
@@ -1198,3 +1222,89 @@ html {
 }
 
 /* Contact section social links now use square containers with rounded edges */
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    z-index: 9999;
+    transition: width 0.25s ease-out;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(139, 92, 246, 0.2);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: loadingSpinAnimation 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes loadingSpinAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-screen p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+}

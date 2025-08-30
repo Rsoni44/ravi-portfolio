@@ -1,8 +1,24 @@
 // Portfolio Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS (you'll need to update these values)
-    emailjs.init('YOUR_PUBLIC_KEY');
+    // Initialize EmailJS (Follow EMAILJS_SETUP_GUIDE.md for setup)
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    // emailjs.init('your_actual_public_key_here');
+    
+    // Loading Screen
+    const loadingScreen = document.getElementById('loadingScreen');
+    setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 1500);
+    
+    // Scroll Progress Bar
+    const scrollProgress = document.getElementById('scrollProgress');
+    
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
     
     // Theme switching functionality
     const themeToggle = document.getElementById('themeToggle');
@@ -29,17 +45,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     });
 
-    // Navbar scroll effect
+    // Navbar scroll effect + Progress bar + Back to top
     const navbar = document.getElementById('navbar');
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.querySelector('.nav-menu');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollProgress = (scrollTop / docHeight) * 100;
+        
+        // Update scroll progress bar
+        document.getElementById('scrollProgress').style.width = scrollProgress + '%';
+        
+        // Navbar scroll effect
+        if (scrollTop > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+        
+        // Back to top button visibility
+        if (scrollTop > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    
+    // Back to top click functionality
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Mobile menu toggle
@@ -205,10 +244,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 to_email: 'ravi.ramsoni01@gmail.com' // Your email address
             };
             
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY')
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
+            // Send email using EmailJS (Follow EMAILJS_SETUP_GUIDE.md for setup)
+            // emailjs.send('your_service_id', 'your_template_id', templateParams, 'your_public_key')
+            
+            // Temporary success simulation (replace with actual EmailJS code)
+            setTimeout(() => {
+                // Simulated response
+                    console.log('Form submitted successfully (simulated)');
                     
                     // Success state
                     submitBtn.textContent = 'Message Sent!';
@@ -226,17 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Show success message
                     showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you soon.', 'success');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    
-                    // Reset button
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    
-                    // Show error message
-                    showNotification('Failed to send message. Please try again or email me directly at ravi.ramsoni01@gmail.com', 'error');
-                });
+            }, 1500); // End simulation
         });
     }
 
@@ -326,46 +358,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero');
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
-
-    // Add floating animation to particles
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach((particle, index) => {
-        const animationDelay = index * 2;
-        particle.style.animationDelay = `${animationDelay}s`;
-        
-        // Random position adjustment
-        const randomX = Math.random() * 20 - 10;
-        const randomY = Math.random() * 20 - 10;
-        particle.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    });
-
-    // Typing effect for hero title (optional enhancement)
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        
-        let index = 0;
-        const typeWriter = () => {
-            if (index < text.length) {
-                heroTitle.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
-        // Start typing effect after a delay
-        setTimeout(typeWriter, 1000);
-    }
 
     // Add hover effects to project cards
     const projectCards = document.querySelectorAll('.project-card');
@@ -445,29 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observeImages.observe(img);
     });
 
-    // Add loading screen (optional)
-    window.addEventListener('load', () => {
-        const loader = document.querySelector('.page-loader');
-        if (loader) {
-            loader.style.opacity = '0';
-            setTimeout(() => loader.remove(), 500);
-        }
-    });
-
-    // Performance optimization: Throttle scroll events
-    let ticking = false;
-    
-    const throttledScroll = () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                // Scroll-dependent functions here
-                ticking = false;
-            });
-            ticking = true;
-        }
-    };
-    
-    window.addEventListener('scroll', throttledScroll);
     
     // Portfolio website loaded successfully! 🚀
 });

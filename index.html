@@ -3,14 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ravi Soni - Data Scientist & ML Engineer Portfolio. Expert in machine learning, data analysis, and building end-to-end ML pipelines. View projects, certifications, and connect for collaboration opportunities.">
-    <title>Ravi - Data Scientist Portfolio</title>
+    <meta name="description" content="Ravi Soni - Data Scientist & ML Engineer Portfolio. Expert in machine learning, data analysis, Tableau, Databricks, and building end-to-end ML pipelines. View projects, certifications, and connect for collaboration opportunities.">
+    <meta name="keywords" content="Data Scientist, Machine Learning Engineer, Python, Tableau, Databricks, Data Visualization, ML Pipeline, Data Analysis, Ravi Soni">
+    <meta name="author" content="Ravi Soni">
+    <meta property="og:title" content="Ravi Soni - Data Scientist & ML Engineer">
+    <meta property="og:description" content="Expert in machine learning, data analysis, and building end-to-end ML pipelines. Specializing in Tableau, Databricks, and cloud platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ravisoni-portfolio.netlify.app">
+    <meta property="og:image" content="images/Ravi_pic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ravi Soni - Data Scientist & ML Engineer">
+    <meta name="twitter:description" content="Expert in machine learning, data analysis, and building end-to-end ML pipelines.">
+    <title>Ravi Soni - Data Scientist & ML Engineer Portfolio</title>
+    <link rel="icon" type="image/png" href="images/Ravi_pic.png">
     <link rel="stylesheet" href="portfolio_css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ravi Soni",
+        "jobTitle": "Data Scientist & ML Engineer",
+        "description": "Expert in machine learning, data analysis, Tableau, Databricks, and building end-to-end ML pipelines",
+        "url": "https://ravisoni-portfolio.netlify.app",
+        "image": "images/Ravi_pic.png",
+        "sameAs": [
+            "https://www.linkedin.com/in/ravisoni4/",
+            "https://github.com/Rsoni44/",
+            "https://public.tableau.com/app/profile/ravi.soni2657/vizzes"
+        ],
+        "email": "ravi.ramsoni01@gmail.com",
+        "knowsAbout": [
+            "Data Science",
+            "Machine Learning",
+            "Python",
+            "Tableau",
+            "Databricks",
+            "Data Visualization",
+            "Big Data",
+            "Cloud Computing"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <p>Loading Portfolio...</p>
+    </div>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -46,7 +94,7 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Ravi</span></h1>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Ravi Soni</span></h1>
                 <h2 class="hero-subtitle">Data Scientist & ML Engineer</h2>
                 <p class="hero-description">
                     I'm passionate about leveraging the power of data science and machine learning to solve complex problems and drive innovation. With expertise in statistical analysis, predictive modeling, and deep learning, I help organizations make data-driven decisions that create real impact.
@@ -57,13 +105,13 @@
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/Rsoni44/" target="_blank" class="social-link" title="GitHub">
-                        <img src="images/Github_logo.png" alt="GitHub" class="social-logo">
+                        <img src="images/Github_logo.png" alt="GitHub" class="social-logo" loading="lazy">
                     </a>
                     <a href="https://www.linkedin.com/in/ravisoni4/" target="_blank" class="social-link" title="LinkedIn">
-                        <img src="images/Linkedin_logo.png" alt="LinkedIn" class="social-logo">
+                        <img src="images/Linkedin_logo.png" alt="LinkedIn" class="social-logo" loading="lazy">
                     </a>
                     <a href="https://public.tableau.com/app/profile/ravi.soni2657/vizzes" target="_blank" class="social-link" title="Tableau">
-                        <img src="images/Tableau_logo.png" alt="Tableau" class="social-logo">
+                        <img src="images/Tableau_logo.png" alt="Tableau" class="social-logo" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -88,6 +136,9 @@
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="images/Ravi_pic.png" alt="Ravi Soni - Data Scientist" class="profile-image" loading="lazy">
+                </div>
                 <div class="about-text fade-in">
                     <p>
                         My journey into data science began with a fascination for patterns and stories hidden within data. With a strong foundation in mathematics and computer science, I've developed expertise in extracting meaningful insights from complex datasets.
@@ -137,14 +188,18 @@
                     <p class="skill-description">Experience with supervised/unsupervised learning, deep learning, NLP, and computer vision using frameworks like TensorFlow and PyTorch.</p>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">📊</div>
+                    <div class="skill-icon">
+                        <img src="images/Tableau_logo.png" alt="Tableau" class="skill-image" loading="lazy">
+                    </div>
                     <h3 class="skill-title">Data Visualization & Tableau</h3>
                     <p class="skill-description">Expert in creating compelling visualizations and interactive dashboards using Tableau, Matplotlib, Seaborn, and Plotly. Transforming complex data into actionable insights through beautiful visual storytelling.</p>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">☁️</div>
-                    <h3 class="skill-title">Cloud Platforms</h3>
-                    <p class="skill-description">Deploying ML models and managing data pipelines on AWS, Google Cloud, and Azure with containerization using Docker.</p>
+                    <div class="skill-icon">
+                        <img src="images/Databricks.png" alt="Databricks" class="skill-image" loading="lazy">
+                    </div>
+                    <h3 class="skill-title">Cloud Platforms & Databricks</h3>
+                    <p class="skill-description">Deploying ML models and managing data pipelines on AWS, Google Cloud, Azure, and Databricks with containerization using Docker.</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">🗄️</div>
@@ -419,13 +474,13 @@
                     </div>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/ravisoni4/" target="_blank" class="social-link">
-                            <img src="images/Linkedin_logo.png" alt="LinkedIn" class="social-logo">
+                            <img src="images/Linkedin_logo.png" alt="LinkedIn" class="social-logo" loading="lazy">
                         </a>
                         <a href="https://github.com/Rsoni44/" target="_blank" class="social-link">
-                            <img src="images/Github_logo.png" alt="GitHub" class="social-logo">
+                            <img src="images/Github_logo.png" alt="GitHub" class="social-logo" loading="lazy">
                         </a>
                         <a href="https://public.tableau.com/app/profile/ravi.soni2657/vizzes" target="_blank" class="social-link">
-                            <img src="images/Tableau_logo.png" alt="Tableau" class="social-logo">
+                            <img src="images/Tableau_logo.png" alt="Tableau" class="social-logo" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -461,8 +516,15 @@
         </div>
     </footer>
 
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4l-8 8 1.41 1.41L12 6.83l6.59 6.58L20 12z"/>
+        </svg>
+    </button>
+
+    <!-- EmailJS SDK - Uncomment when you configure EmailJS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
     <script src="portfolio_js.js"></script>
 </body>
 </html>
