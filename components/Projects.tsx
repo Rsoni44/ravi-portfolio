@@ -18,7 +18,7 @@ const projects = [
     category: 'Cybersecurity / ML',
     description: 'Built a real-time fraud detection system using Random Forest and XGBoost on imbalanced datasets (1:100 fraud ratio). Implemented SMOTE for handling class imbalance, achieving 94% precision and 89% recall. Features advanced feature engineering and model evaluation pipelines.',
     tags: ['Python', 'Scikit-learn', 'XGBoost', 'SMOTE'],
-    github: 'https://github.com/Rsoni44/Fraud-Detection',
+    github: 'https://github.com/Rsoni44/Real-Time-Fraud-Detection',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200'
   },
   {

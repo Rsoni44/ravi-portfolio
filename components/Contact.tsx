@@ -70,13 +70,6 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="space-y-2">
-              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Email</p>
-              <a href="mailto:ravi.ramsoni01@gmail.com" className="text-2xl font-medium hover:text-indigo-400 transition-colors">
-                ravi.ramsoni01@gmail.com
-              </a>
-            </div>
-
             <div className="flex gap-8">
               {[
                 { Icon: Linkedin, href: 'https://www.linkedin.com/in/ravisoni4/' },

@@ -1,20 +1,47 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Ravi Soni - Portfolio
 
-# Run and deploy your AI Studio app
+Professional portfolio website showcasing data science, machine learning, and analytics expertise.
 
-This contains everything you need to run your app locally.
+## About
 
-View your app in AI Studio: https://ai.studio/apps/drive/1-fZfAEwogGEGijRIMTrKQRlvvZjuyh6Z
+This portfolio highlights my experience in:
+- Machine Learning & MLOps
+- Data Science & Analytics
+- Cloud Architecture (GCP, Azure)
+- Business Intelligence & Visualization
+
+## Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Build Tool**: Vite
+- **Deployment**: GitHub Pages
+- **Analytics Tools**: Tableau, Power BI
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3001](http://localhost:3001) in your browser
+
+## Build
+
+```bash
+npm run build
+```
+
+## Contact
+
+For professional inquiries and collaborations:
+- LinkedIn: [ravisoni4](https://www.linkedin.com/in/ravisoni4/)
+- GitHub: [Rsoni44](https://github.com/Rsoni44/)
+- Tableau: [ravi.soni2657](https://public.tableau.com/app/profile/ravi.soni2657/vizzes)
