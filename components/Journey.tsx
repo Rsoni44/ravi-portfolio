@@ -3,25 +3,25 @@ import React from 'react';
 
 const experiences = [
   {
-    period: 'Professional Focus',
-    company: 'Machine Learning & Data Science',
-    location: 'Remote',
-    role: 'ML Engineer',
-    description: 'As a data scientist and ML engineer, I specialize in developing production-ready machine learning solutions using Python, R, and modern cloud platforms. My technical stack includes TensorFlow, PyTorch, scikit-learn, and expertise in big data processing with Spark and Hadoop.'
+    period: 'May 2023 – Dec 2025',
+    company: 'Verizon',
+    location: 'Basking Ridge, NJ',
+    role: 'Data Scientist',
+    description: 'Led enterprise-scale ML initiatives delivering multi-million-dollar business impact through advanced analytics and GenAI solutions. Architected a proprietary "Mapping Engine" on Vertex AI with comprehensive MLOps lifecycle management, achieving 16% accuracy improvement in T&C violation detection and churn prediction models. Pioneered LLM-powered sentiment analysis using BERT and GPT to automate customer engagement strategies, while developing cutting-edge GenAI applications with LangChain and LangGraph for NLP2SQL capabilities. Orchestrated the migration of legacy data infrastructure to GCP, implementing production-ready workflows on Vertex AI and Kubeflow that reduced violation detection cycles by 21% and reporting overhead by 33%. Designed enterprise-grade Snowflake data architecture supporting large-scale ML workloads while conducting sophisticated HDBSCAN clustering analysis to optimize customer retention strategies.'
   },
   {
-    period: 'Technical Expertise',
-    company: 'Cloud & Data Engineering',
-    location: 'Azure & Databricks',
-    role: 'Data Engineer',
-    description: 'I build end-to-end ML pipelines on Databricks and Azure, creating interactive dashboards in Tableau that translate complex analytics into business value. My work focuses on classification models, predictive analytics, and automated data processing workflows using Apache Airflow.'
+    period: 'Mar 2022 – Aug 2022',
+    company: 'Stevens Institute of Technology',
+    location: 'Hoboken, NJ',
+    role: 'Research Assistant',
+    description: 'Conducted advanced deep learning research focused on model optimization and efficiency. Developed novel Bayesian Compression techniques in PyTorch that significantly enhanced model interpretability while eliminating computational redundancies. Engineered violation detection algorithms using state-of-the-art frameworks (PyTorch, TensorFlow) that improved detection accuracy by 15%. Built scalable cloud infrastructure on GCP leveraging PySpark for real-time processing of terabyte-scale datasets, seamlessly integrated with Snowflake for enterprise data warehousing. Applied rigorous data science methodologies including advanced feature engineering, statistical outlier detection, and sophisticated techniques for handling imbalanced datasets using MLlib.'
   },
   {
-    period: 'Continuous Learning',
-    company: 'Certifications & Growth',
-    location: 'Industry Standards',
-    role: 'Certified Professional',
-    description: 'Certified in Microsoft Azure Data Science, Databricks, Dataiku, and Apache Airflow, I stay current with industry best practices and emerging ML technologies. My GitHub portfolio showcases projects in fraud detection, healthcare analytics, and deep learning applications.'
+    period: 'Sept 2016 – Aug 2021',
+    company: 'MPMKVVCL India (Government Owned)',
+    location: 'Bhopal, India',
+    role: 'Manager / Lead Data Analyst',
+    description: 'Directed analytics operations for a government utility serving millions, leading a high-performing team of 9 data professionals to achieve 100% on-time delivery while increasing productivity by 25% through agile transformation. Delivered over $1M in operational cost savings through sophisticated predictive modeling and optimization algorithms. Spearheaded the development of an ML-powered fraud detection system that increased vigilance effectiveness by 30%, directly recovering $750K+ in annual revenue. Architected enterprise-scale data infrastructure processing 5M+ daily records and built comprehensive Tableau analytics suite with 15+ executive dashboards, eliminating 40+ hours of manual reporting weekly. Developed production-grade time-series forecasting models achieving >95% accuracy for energy demand prediction, enabling strategic resource optimization across the grid network.'
   }
 ];
 

@@ -19,9 +19,10 @@ export const Hero: React.FC = () => {
 
           <div className="max-w-xl">
             <p className="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
-              I transform complex data into actionable insights. Specializing in machine learning pipelines,
-              predictive modeling, and data visualization with Tableau and Databricks. I build scalable ML
-              solutions that solve real-world business problems.
+              Data Scientist specializing in end-to-end ML pipelines, GenAI solutions, and MLOps automation.
+              Expert in deploying production-ready models on GCP with proven track record of delivering
+              multi-million dollar business impact through advanced analytics, LLM-powered systems, and
+              scalable cloud architectures.
             </p>
           </div>
           
@@ -55,13 +56,6 @@ export const Hero: React.FC = () => {
               className="w-full h-full object-cover object-center opacity-80 group-hover:scale-105 transition-transform duration-1000"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-            <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-              <div>
-                <p className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Architect</p>
-                <p className="font-heading font-bold text-lg tracking-tight">Ravi Soni</p>
-              </div>
-              <div className="w-12 h-[1px] bg-white/20 mb-3" />
-            </div>
           </div>
         </div>
       </div>
