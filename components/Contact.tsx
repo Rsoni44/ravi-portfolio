@@ -87,7 +87,7 @@ export const Contact: React.FC = () => {
                 </a>
               ))}
               <a href="https://public.tableau.com/app/profile/ravi.soni2657/vizzes" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">
-                <img src="/images/Tableau_logo.png" alt="Tableau" className="w-6 h-6" />
+                <img src={`${import.meta.env.BASE_URL}images/Tableau_logo.png`} alt="Tableau" className="w-6 h-6" />
               </a>
             </div>
           </div>

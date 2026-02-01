@@ -17,7 +17,7 @@ const certifications = [
     date: '2024',
     tags: ['Machine Learning', 'Dataiku', 'ML Platform'],
     url: 'https://verify.skilljar.com/c/t6s54e5ca47s',
-    logo: '/images/DATAIKU.avif'
+    logo: `${import.meta.env.BASE_URL}images/DATAIKU.avif`
   },
   {
     title: 'Dataiku Core Designer Certificate',
@@ -25,7 +25,7 @@ const certifications = [
     date: '2024',
     tags: ['Data Design', 'Dataiku', 'Data Engineering'],
     url: 'https://verify.skilljar.com/c/qutp8yatk3ty',
-    logo: '/images/DATAIKU.avif'
+    logo: `${import.meta.env.BASE_URL}images/DATAIKU.avif`
   },
   {
     title: 'Academy Accreditation - Databricks Lakehouse Fundamentals',
@@ -33,7 +33,7 @@ const certifications = [
     date: '2024',
     tags: ['Databricks', 'Lakehouse', 'Big Data'],
     url: 'https://credentials.databricks.com/bee430dc-5910-4ce8-bc76-f5a56540db68',
-    logo: '/images/Databricks.png'
+    logo: `${import.meta.env.BASE_URL}images/Databricks.png`
   },
   {
     title: 'Astronomer Certification for Apache Airflow Fundamentals',
@@ -41,7 +41,7 @@ const certifications = [
     date: '2024',
     tags: ['Apache Airflow', 'Data Pipeline', 'Workflow Automation'],
     url: 'https://www.credly.com/badges/5c797b82-dc66-4301-a008-0bfab6ee0ed6/linked_in_profile',
-    logo: '/images/astronomer.png'
+    logo: `${import.meta.env.BASE_URL}images/astronomer.png`
   }
 ];
 

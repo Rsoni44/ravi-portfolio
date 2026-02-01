@@ -36,13 +36,13 @@ export const Hero: React.FC = () => {
 
           <div className="flex items-center gap-6">
             <a href="https://github.com/Rsoni44/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">
-              <img src="/images/Github_logo.png" alt="GitHub" className="w-8 h-8" />
+              <img src={`${import.meta.env.BASE_URL}images/Github_logo.png`} alt="GitHub" className="w-8 h-8" />
             </a>
             <a href="https://www.linkedin.com/in/ravisoni4/" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">
-              <img src="/images/Linkedin_logo.png" alt="LinkedIn" className="w-8 h-8" />
+              <img src={`${import.meta.env.BASE_URL}images/Linkedin_logo.png`} alt="LinkedIn" className="w-8 h-8" />
             </a>
             <a href="https://public.tableau.com/app/profile/ravi.soni2657/vizzes" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">
-              <img src="/images/Tableau_logo.png" alt="Tableau" className="w-8 h-8" />
+              <img src={`${import.meta.env.BASE_URL}images/Tableau_logo.png`} alt="Tableau" className="w-8 h-8" />
             </a>
           </div>
         </div>
@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
         <div className="lg:col-span-4 flex justify-end">
           <div className="relative w-full aspect-[4/5] overflow-hidden grayscale border border-white/5 bg-zinc-900 group">
             <img
-              src="/images/Ravi_pic.png"
+              src={`${import.meta.env.BASE_URL}images/Ravi_pic.png`}
               alt="Ravi Soni - Data Scientist"
               className="w-full h-full object-cover object-center opacity-80 group-hover:scale-105 transition-transform duration-1000"
             />

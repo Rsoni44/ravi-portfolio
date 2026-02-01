@@ -10,7 +10,7 @@ const projects = [
     description: 'Production-grade ML system that forecasts customer attrition in telecommunications. Built ensemble architecture combining LightGBM, XGBoost, and CatBoost with SMOTE for handling 26.5% class imbalance. Deployed on GCP Vertex AI with REST API endpoints. Achieves 91.8% ROC-AUC and 87.3% accuracy.',
     tags: ['Python', 'GCP Vertex AI', 'XGBoost', 'BigQuery'],
     github: 'https://github.com/Rsoni44/Churn_Gaurd',
-    image: '/images/churn-rate.png'
+    image: `${import.meta.env.BASE_URL}images/churn-rate.png`
   },
   {
     id: '02',
@@ -37,7 +37,7 @@ const projects = [
     description: 'Interactive dashboards and data visualizations created with Tableau. Showcasing expertise in transforming complex data into compelling, actionable insights through beautiful visual storytelling.',
     tags: ['Tableau', 'Data Visualization', 'Dashboards', 'Business Intelligence'],
     github: 'https://public.tableau.com/app/profile/ravi.soni2657/vizzes',
-    image: '/images/tableau-visualization.png'
+    image: `${import.meta.env.BASE_URL}images/tableau-visualization.png`
   }
 ];
 
